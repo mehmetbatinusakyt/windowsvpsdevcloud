@@ -1,12 +1,12 @@
 
-FROM spaceinvaderone/windows11_insider
+FROM cirrusci/windowsservercore
 
 
 RUN Invoke-WebRequest https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe -OutFile ngrok.exe
 RUN Invoke-WebRequest https://raw.githubusercontent.com/mehmetbatinusakyt/WindowsVPS2021/main/Files/nssm.exe -OutFile nssm.exe
 RUN copy nssm.exe C:\Windows\System32
 RUN copy ngrok.exe C:\Windows\System32
-RUN .\ngrok.exe authtoken 
+RUN .\ngrok.exe 1uaLmw0wLqlqfw2eclrzgr21SP8_7RzSJyvvAGp4hSg4JxWb8
 RUN Invoke-WebRequest https://raw.githubusercontent.com/mehmetbatinusakyt/WindowsVPS2021/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
 RUN Invoke-WebRequest https://raw.githubusercontent.com/mehmetbatinusakyt/WindowsVPS2021/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
 RUN Invoke-WebRequest https://raw.githubusercontent.com/mehmetbatinusakyt/WindowsVPS2021/main/Files/loop.bat -OutFile loop.bat
