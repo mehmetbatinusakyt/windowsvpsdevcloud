@@ -1,5 +1,5 @@
 
-FROM mcr.microsoft.com/windows/server
+FROM spaceinvaderone/windows11_insider
 
 
 RUN Invoke-WebRequest https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe -OutFile ngrok.exe
